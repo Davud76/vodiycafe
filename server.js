@@ -51,7 +51,7 @@ function nextId(){
 }
 
 // Kitchen password
-const KITCHEN_PASSWORD = 'StrongBackendPass123';
+const KITCHEN_PASSWORD = 'BackPass123';
 const kitchenAuthMiddleware = (req,res,next)=>{
   const pw = req.headers['x-kitchen-password'];
   if(pw !== KITCHEN_PASSWORD) return res.status(401).json({ error:'Unauthorized: wrong kitchen password' });
@@ -193,3 +193,4 @@ app.get('/api/analytics', analyticsAuthMiddleware, (req,res)=>{
 
 // Start server
 app.listen(PORT, ()=>{ console.log(`🍽 VodiyCafe server running at http://localhost:${PORT}`); });
+
