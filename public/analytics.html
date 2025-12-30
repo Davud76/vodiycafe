@@ -46,7 +46,7 @@ async function loadSales(){
   const params=new URLSearchParams();
   if(start) params.append('start',start);
   if(end) params.append('end',end);
-  params.append('pw','StrongBackendPass123'); // required for protected API
+  params.append('pw','BackPass123'); // required for protected API
 
   try{
     const res = await fetch('/api/analytics?' + params.toString());

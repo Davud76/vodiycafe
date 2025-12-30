@@ -297,7 +297,7 @@ function askKitchenPassword(){
 }
 function checkPassword(){
   const val=kitchenInput.value.trim();
-  if(val==='StrongBackendPass123'){
+  if(val==='BackPass123'){
     kitchenPassword=val; kitchenPopup.style.display='none'; kitchenInput.value=''; kitchenError.style.display='none';
     showAnalyticsButton();
   } else { kitchenError.style.display='block'; kitchenInput.value=''; kitchenInput.focus(); }

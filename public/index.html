@@ -336,7 +336,7 @@ async function submitOrder(tableToken){
   const items = Object.values(cart).map(i=>({name:i.name, qty:i.qty, price:i.price}));
   const total = items.reduce((s,i)=>s+i.price*i.qty,0);
   try{
-    const res = await fetch('${BACKEND_URL}/api/orders', {
+    const res = await fetch('/api/orders', {
       method:'POST',
       headers:{'Content-Type':'application/json'},
       body: JSON.stringify({items, tableToken, total, time:new Date().toISOString()})
