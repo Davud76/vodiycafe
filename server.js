@@ -193,4 +193,3 @@ app.get('/api/analytics', analyticsAuthMiddleware, (req,res)=>{
 
 // Start server
 app.listen(PORT, ()=>{ console.log(`🍽 VodiyCafe server running at http://localhost:${PORT}`); });
-

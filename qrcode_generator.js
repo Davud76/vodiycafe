@@ -20,7 +20,7 @@ if (fs.existsSync(tablesFile)) {
 // generate QR codes
 (async () => {
   for (const table of tables) {
-    const url = `http://192.168.10.188:3000/?token=${table.token}`;
+    const url = `https://www.vodiycafe.com/?token=${table.token}`;
     const qrPath = path.join(outputDir, `table_${table.table}.png`);
 
     await QRCode.toFile(qrPath, url, {
